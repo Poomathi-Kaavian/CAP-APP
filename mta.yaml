@@ -146,10 +146,10 @@ resources:
     service: destination
     service-plan: lite
 - name: cpapp-connectivity
-   type: org.cloudfoundry.managed-service
-   parameters:
-     service: connectivity
-     service-plan: lite
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: connectivity
+    service-plan: lite
 - name: cpapp-html5-repo-host
   type: org.cloudfoundry.managed-service
   parameters:

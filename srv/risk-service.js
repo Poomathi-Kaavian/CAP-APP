@@ -6,7 +6,7 @@ const cds = require('@sap/cds')
  */
 module.exports = cds.service.impl(async function() {
 
-    const bupa = await cds.connect.to('API_BUSINESS_PARTNER');
+    const bupa = await cds.connect.to('API_PURCHASEORDER_PROCESS_SRV');
 
     this.on('READ', 'Suppliers', async req => {
         return bupa.run(req.query);

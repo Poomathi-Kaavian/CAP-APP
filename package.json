@@ -15,11 +15,11 @@
         "passport": "^0.5.0"
     },
     "devDependencies": {
-        "@sap/ux-specification": "^1.90.12",
+        "@sap/ux-specification": "^1.96.52",
         "sqlite3": "^5.0.2"
     },
     "engines": {
-        "node": "^16"
+        "node": "^18"
     },
     "scripts": {
         "start": "cds run",
@@ -57,6 +57,9 @@
         "app/mitigations"
     ],
     "cds": {
+        "features": {
+            "fiori_preview": true
+          },
         "requires": {
             "[production]": {
                 "db": {
@@ -72,6 +75,13 @@
             "uaa": {
                 "kind": "xsuaa",
                 "credentials": {}
+            },
+            "API_PURCHASEORDER_PROCESS_SRV": {
+                "kind": "odata-v2",
+                "credentials": {
+                    "path": "/sap/opu/odata/sap/API_PURCHASEORDER_PROCESS_SRV",
+                    "destination": "BusinessPartner"
+                }
             },
             "API_BUSINESS_PARTNER": {
                 "kind": "odata-v2",
